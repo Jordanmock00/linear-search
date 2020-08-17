@@ -1,0 +1,20 @@
+pos = -1
+
+def search(list, n):
+    i = 0
+    while i< len(list):
+        if list[i] == n:
+            globals()['pos'] = i
+            return True
+        i = i + 1
+    return False
+
+list = [4, 3, 8, 6, 7, 9, 5]
+n = 7
+
+search(list)
+
+if search(list, n):
+    print("the number you are looking for is located at position ",pos+1)
+else:
+    print("make me...")
